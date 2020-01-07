@@ -20,4 +20,11 @@ public class EmpresaServiceImpl {
 		return repository.findAll(pageable);
 	}
 
+	@Transactional
+	public Empresa salvar(Empresa empresa) {
+		return repository.save(empresa);
+	}
+	
+	
+
 }

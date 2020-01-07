@@ -23,4 +23,7 @@ public class ResponseDTO<T> implements Serializable {
 	public ResponseDTO(T data) {
 		this.data = data;
 	}
+	
+	public ResponseDTO() {
+	}
 }
