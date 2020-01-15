@@ -33,7 +33,8 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 
 	private List<String> obterListaErros(BindingResult bindingResult) {
 		List<String> erros = new ArrayList<>();
-		bindingResult.getFieldErrors().forEach(e -> erros.add(e.getDefaultMessage()));
+	  //bindingResult.getFieldErrors().forEach(e -> erros.add(e.getDefaultMessage()));
+		bindingResult.getFieldErrors().forEach(e -> erros.add(messageService.getMessage(e)));
 		return erros;
 
 	}
